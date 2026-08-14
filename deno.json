@@ -1,0 +1,21 @@
+{
+  "lock": true,
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check client/main.ts server/main.ts shared/mod.ts tests/health.test.ts",
+    "fmt": "deno fmt",
+    "lint": "deno lint",
+    "test": "deno test tests/",
+    "dev": "deno run --watch server/main.ts"
+  },
+  "fmt": {
+    "lineWidth": 100,
+    "indentWidth": 2,
+    "singleQuote": true,
+    "proseWrap": "preserve"
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  }
+}
