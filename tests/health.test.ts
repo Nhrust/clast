@@ -1,6 +1,7 @@
-import { assertEquals } from 'jsr:@std/assert';
 import { PROJECT_NAME } from '../shared/mod.ts';
 
 deno.test('shared workspace is available', () => {
-  assertEquals(PROJECT_NAME, 'Classic Tanks');
+  if (PROJECT_NAME !== 'Classic Tanks') {
+    throw new Error(`Unexpected project name: ${PROJECT_NAME}`);
+  }
 });
